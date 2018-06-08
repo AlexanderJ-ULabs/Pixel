@@ -32,6 +32,8 @@ namespace GateKeeper.Pixel
                 logConfiguration.WriteTo.RollingFile("log-.txt");
 
             var computers = NetworkBrowser.GetNetworkComputers();
+            var computers2 = NativeMethods.GetNetworkComputerNames();
+            var computers3 = NetApi32.GetServerList(NetApi32.SV_101_TYPES.SV_TYPE_ALL);
         }
 
         private static string NormalizePath(string str)
